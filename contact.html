@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            background: url('assets/images/project1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .form-container {
+            position: relative;
+            display: grid;
+            align-items: center;
+            margin: auto;
+            padding: 2rem 2.5rem;
+            border: .125rem solid white;
+            border-radius: .5rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .form {
+            margin: auto;
+            color: white;
+        }
+
+        .close-button {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: white;
+            background-color: gray;
+            border-top-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            padding: 0 .5rem;
+            cursor: pointer;
+        }
+
+        .is-close {
+            display: none;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cls = document.getElementById('1');
+            console.log(cls);
+            cls.addEventListener('click', function () {
+                var frm = document.getElementById('frm');
+                frm.classList.add('is-close');
+            
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="frm" class="form-container">
+            <div id="1" class="close-button">
+                <h2>X</h2>
+            </div>
+            <form action="" class="form">
+                <h1 class="title">Login</h1>
+                <div>
+                    <label for="" class="label">Email</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="" class="label">Password</label>
+                    <input type="password">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
